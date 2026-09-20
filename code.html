@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+.technical-grid {
+  background-image: radial-gradient(rgba(181, 196, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.chamfer-cut {
+  clip-path: polygon(0px 0px, calc(100% - 14px) 0px, 100% 14px, 100% 100%, 14px 100%, 0px calc(100% - 14px));
+}
+.chamfer-cut-lg {
+  clip-path: polygon(0px 0px, calc(100% - 18px) 0px, 100% 18px, 100% 100%, 18px 100%, 0px calc(100% - 18px));
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#b5c4ff",
+          "primary-fixed": "#dbe1ff",
+          "primary-container": "#005bf7",
+          "surface-dim": "#11131c",
+          "surface-container-lowest": "#0c0e17",
+          "error": "#ffb4ab",
+          "outline": "#8d90a2",
+          "on-error-container": "#ffdad6",
+          "outline-variant": "#424656",
+          "surface-container": "#161922",
+          "inverse-primary": "#0051df",
+          "tertiary-fixed-dim": "#ffb59e",
+          "secondary-container": "#1b6d39",
+          "surface-container-low": "#131620",
+          "on-secondary-fixed": "#00174d",
+          "on-primary-fixed-variant": "#003dab",
+          "on-tertiary-fixed": "#390b00",
+          "secondary": "#25D366",
+          "on-primary-container": "#e6e9ff",
+          "tertiary-fixed": "#ffdbd0",
+          "secondary-fixed": "#3df282",
+          "inverse-on-surface": "#2e303a",
+          "secondary-fixed-dim": "#25d366",
+          "on-secondary-fixed-variant": "#0a4521",
+          "on-primary-fixed": "#00174c",
+          "on-tertiary-container": "#ffe5dd",
+          "surface-variant": "#2a2d3c",
+          "surface-container-high": "#1e2230",
+          "surface-tint": "#b5c4ff",
+          "surface-bright": "#32374a",
+          "primary-fixed-dim": "#b5c4ff",
+          "on-primary": "#002266",
+          "tertiary": "#ffb59e",
+          "error-container": "#93000a",
+          "on-surface-variant": "#c3c5d8",
+          "on-tertiary": "#5d1800",
+          "on-secondary-container": "#a7f3d0",
+          "surface": "#0f111a",
+          "surface-container-highest": "#252b3d",
+          "inverse-surface": "#e1e1ef",
+          "on-tertiary-fixed-variant": "#842500",
+          "tertiary-container": "#c03a00",
+          "on-error": "#690005",
+          "on-background": "#e1e1ef",
+          "background": "#0f111a",
+          "on-secondary": "#052e16",
+          "on-surface": "#e1e1ef"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "1.25rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-2xl": "4rem",
+          "margin": "1rem",
+          "space-xl": "2.5rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter-desktop": "2rem",
+          "margin-desktop": "3rem"
+        },
+        "fontFamily": {
+          "headline": [
+            "Barlow Condensed"
+          ],
+          "display": [
+            "Barlow Condensed"
+          ],
+          "body": [
+            "Inter"
+          ],
+          "label": [
+            "Barlow Condensed"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": ["22px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "display": ["56px", { "lineHeight": "60px", "letterSpacing": "0.03em", "fontWeight": "800" }],
+          "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+          "label-lg": ["18px", { "lineHeight": "22px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+          "headline-lg": ["40px", { "lineHeight": "44px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+          "headline-md": ["28px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "700" }]
+        }
+      },
+    },
+  }
+</script></head><body class="bg-surface font-body text-on-surface antialiased relative min-h-screen selection:bg-primary-container selection:text-white"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant/40"><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Logo Taller Rubén Gómez" class="h-11 w-11 object-contain rounded-full border border-primary/30 shadow" src="https://lh3.googleusercontent.com/aida/AEtjO1VH1xFUQaXE3a_ugpw6amxD1eeo-sqtq4I7exBAs2xsQGNhKAZwLyGlndMV1vhqP9DZMToPYC5HTGm0X5PNjvoPd6SBH1bsLr_GS7g5B2YKdaOKJ9j-gfrtiKCtvZ2ekxJidIVSrrtOKJTkbE8tekqQ7-zfMevdffTHurdztPYPThkr6iairuGCCI4xUSCoCW9DdO6z1kSpOIV2aC__nLPUpAglvwleYa1kmQWmsOW7Wb8ESq1u6uqWGt8"/><div class="flex flex-col justify-center pl-space-xs"><span class="font-headline text-headline-sm uppercase tracking-wider text-on-surface leading-none font-bold">Taller Rubén Gómez</span><span class="font-label text-label-sm text-primary uppercase tracking-widest leading-tight mt-0.5 font-semibold">Rosario · Mecánica &amp; Gomería Integral</span></div></div><nav class="hidden xl:flex items-center gap-space-md"><a aria-current="page" class="uppercase transition-colors bg-primary-container text-white font-label text-label-md rounded px-space-sm py-1.5 font-semibold tracking-wider" data-path="inicio" href="#">Inicio</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="servicios" href="#servicios">Servicios</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="cubiertas" href="#cubiertas">Cubiertas</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="trayectoria" href="#trayectoria">Trayectoria</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="trabajos" href="#trabajos">Instalaciones</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="opiniones" href="#opiniones">Opiniones</a><a class="font-label text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors py-1.5 px-space-xs tracking-wider" data-path="ubicacion" href="#ubicacion">Ubicación</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center gap-space-xs px-space-sm py-2 bg-surface-container hover:bg-surface-container-high transition-colors rounded border border-surface-variant/50 text-on-surface-variant hover:text-on-surface" href="tel:03414310000"><span class="material-symbols-outlined text-[18px] text-primary">call</span><span class="font-label text-label-md tracking-wider text-on-surface">(0341) 431-XXXX</span></a><a class="flex items-center gap-space-xs bg-secondary hover:brightness-110 text-on-secondary px-space-md py-2.5 font-label text-label-md uppercase tracking-wider transition-all chamfer-cut font-bold shadow-[0_0_15px_rgba(37,211,102,0.35)]" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quisiera%20pedir%20un%20turno%20para%20revisar%20mi%20auto" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden md:inline">WhatsApp Taller</span><span class="md:hidden">Turno</span></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full text-on-surface overflow-hidden">
+<!-- ============================================================ -->
+<!-- HERO SECTION                                                 -->
+<!-- ============================================================ -->
+<section class="relative w-full min-h-[88vh] flex items-center justify-center bg-surface-container-lowest -mt-20 pt-28 pb-16 overflow-hidden technical-grid">
+<!-- Technical Geometric Overlay -->
+<div class="absolute inset-0 z-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/95 to-surface-container-lowest/70 pointer-events-none"></div>
+<!-- Subtle Tire Track Decorative Watermark Background Vector (Clean SVG, NO text) -->
+<div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-[0.06] pointer-events-none select-none text-primary overflow-hidden flex items-center justify-end">
+<svg class="w-[600px] h-[900px] transform -rotate-12 translate-x-20" fill="currentColor" viewbox="0 0 200 400">
+<pattern height="40" id="heroTirePattern" patternunits="userSpaceOnUse" width="40">
+<path d="M4 6 L16 14 L12 18 L0 10 Z"></path>
+<path d="M24 6 L36 14 L32 18 L20 10 Z"></path>
+<path d="M4 26 L16 34 L12 38 L0 30 Z"></path>
+<path d="M24 26 L36 34 L32 38 L20 30 Z"></path>
+<line stroke="currentColor" stroke-width="2" x1="0" x2="40" y1="20" y2="20"></line>
+</pattern>
+<rect fill="url(#heroTirePattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Subtle High-Precision Workshop Atmosphere Backdrop -->
+<div class="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 opacity-20 pointer-events-none overflow-hidden mix-blend-luminosity">
+<img alt="Taller mecánico fondo" class="w-full h-full object-cover object-center filter contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1VADVxUfMMwyMmajLsSkg-nZU6DMHVX42H9knffpS9lH0XgFwgxrIG54jrfQelsFoPiQOaI5KV5EY94CEs69Wgc2nCS0v2UqaKigK4axl-UA_aIBxvVnbwM1kgTWYYIpeLjbUuOcHMRQimmhJ16x6OoDfixq3cM6wHnkWFIzB04L9yyk67wJxy6uNDiMPEVL5Odhbupqo6TtWRiwBW7WDXdinxuCpiP4Ddb--cLL-e_ihwkklNA5fLvGbU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 max-w-7xl w-full mx-auto px-margin lg:px-margin-desktop py-space-md">
+<div class="max-w-3xl space-y-space-md">
+<!-- Google Trust Badge Pill -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high/90 border border-primary/20 backdrop-blur-md px-space-md py-1.5 rounded-full shadow-lg">
+<svg class="w-4 h-4 shrink-0" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12 0 12s.7 2.3 1.9 4.7l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.1 7.5 23 12 23z" fill="#34A853"></path>
+</svg>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label text-label-md uppercase tracking-wider text-on-surface font-semibold">4.8 · +170 reseñas en Google</span>
+</div>
+<!-- Main Display Headline -->
+<div class="space-y-space-xs">
+<div class="font-label text-label-lg tracking-widest text-primary uppercase flex items-center gap-space-xs font-bold">
+<span class="w-8 h-[2px] bg-primary inline-block"></span>
+  Ituzaingó 3840 · Rosario, Santa Fe · Desde 2008
+</div>
+<h1 class="font-display text-display uppercase tracking-tight text-white leading-[1.05] drop-shadow-md">
+  TALLER MECÁNICO <br/>
+<span class="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-fixed to-blue-400">RUBÉN GÓMEZ</span>
+<span class="block text-2xl lg:text-3xl text-secondary mt-2 tracking-wide font-headline">MECÁNICA INTEGRAL &amp; VENTA DE CUBIERTAS</span>
+</h1>
+</div>
+<!-- Value Subtitle -->
+<p class="font-body text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+  Mecánica general en Rosario, diagnóstico computarizado, frenos, tren delantero y el nuevo centro de <strong class="text-white font-semibold">venta y colocación de neumáticos multimarca</strong> con balanceo dinámico de precisión y colocación en el acto.
+</p>
+<!-- CTA Action Buttons Group -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<!-- Primary WhatsApp Chamfered CTA -->
+<a class="group relative inline-flex items-center justify-center gap-space-sm bg-secondary hover:bg-secondary-fixed text-on-secondary px-space-xl py-4 font-label text-label-lg uppercase tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:-translate-y-0.5 chamfer-cut-lg font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quisiera%20pedir%20un%20turno%20o%20consultar%20por%20cubiertas%20para%20mi%20auto" rel="noopener" target="_blank">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-surface opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-on-secondary"></span>
+</span>
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span>Pedí tu turno por WhatsApp</span>
+</a>
+<!-- Secondary Call Now CTA -->
+<a class="inline-flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest border border-surface-variant text-on-surface px-space-lg py-4 font-label text-label-lg uppercase tracking-wider rounded transition-all shadow-md font-semibold" href="tel:03414310000">
+<span class="material-symbols-outlined text-[20px] text-primary">call</span>
+<span>Llamar ahora</span>
+</a>
+</div>
+<!-- Quick Proof Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-space-sm text-on-surface-variant font-label text-label-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high/80 border border-surface-variant/40 rounded text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">tire_repair</span>
+  Colocación de cubiertas en el acto
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high/80 border border-surface-variant/40 rounded text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">build_circle</span>
+  Repuestos de primera línea
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high/80 border border-surface-variant/40 rounded text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-400">handshake</span>
+  Atención directa de Rubén
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- TRUST BAR / STRIP                                            -->
+<!-- ============================================================ -->
+<section class="w-full bg-[#0a1b3a] border-y border-primary/20 shadow-xl relative z-20">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-space-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[22px]">tire_repair</span>
+</div>
+<div>
+<div class="font-headline text-headline-sm uppercase text-white leading-none font-bold">Gomería &amp; Cubiertas</div>
+<div class="font-body text-body-sm text-primary-fixed opacity-90">Colocación en el acto</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[22px]">thumb_up</span>
+</div>
+<div>
+<div class="font-headline text-headline-sm uppercase text-white leading-none font-bold">+170 Clientes</div>
+<div class="font-body text-body-sm text-primary-fixed opacity-90">Reseñas 5 estrellas</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[22px]">request_quote</span>
+</div>
+<div>
+<div class="font-headline text-headline-sm uppercase text-white leading-none font-bold">Presupuesto Claro</div>
+<div class="font-body text-body-sm text-primary-fixed opacity-90">Transparente y sin cargo</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div>
+<div class="font-headline text-headline-sm uppercase text-white leading-none font-bold">Lun a Vie: 08:30 a 16:00</div>
+<div class="font-body text-body-sm text-primary-fixed opacity-90">Ituzaingó 3840 · Rosario</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- DESTACADO: VENTA Y COLOCACIÓN DE CUBIERTAS (GOMERÍA)        -->
+<!-- ============================================================ -->
+<section class="w-full bg-surface-container-low py-space-2xl relative border-b border-surface-variant/30" id="cubiertas">
+<!-- Subtle Racing / Technical Vector Texture -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none overflow-hidden select-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="stripes" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="40">
+<line stroke="#fff" stroke-width="4" x1="0" x2="0" y1="0" y2="40"></line>
+</pattern>
+</defs>
+<rect fill="url(#stripes)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="bg-gradient-to-br from-[#161924] via-[#1a1f30] to-[#131722] border-2 border-primary/30 rounded-xl p-space-lg lg:p-space-xl shadow-2xl relative overflow-hidden">
+<!-- Accent Glow -->
+<div class="absolute -right-24 -top-24 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-60 h-60 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/15 border border-secondary/40 text-secondary rounded-full font-label text-label-sm uppercase tracking-widest font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Nuevo Servicio Destacado · Gomería Integral
+          </div>
+<div class="space-y-space-xs">
+<h2 class="font-headline text-headline-lg lg:text-[44px] uppercase text-white font-extrabold leading-tight">
+              VENTA Y COLOCACIÓN DE CUBIERTAS &amp; NEUMÁTICOS
+            </h2>
+<p class="font-body text-body-lg text-primary-fixed/90">
+              Incorporamos equipamiento de última generación para el recambio, alineación y balanceo computarizado de neumáticos multimarca para autos, SUV y camionetas.
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-high/60 border border-surface-variant/40 rounded">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white text-[18px]">Venta de Primeras Marcas</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Bridgestone, Pirelli, Michelin, Goodyear, Firestone y Fate en todas las medidas.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-high/60 border border-surface-variant/40 rounded">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">speed</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white text-[18px]">Colocación en el Acto</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Desarme y armado sin marcar tus llantas de chapa o aleación con destalonadora neumática.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-high/60 border border-surface-variant/40 rounded">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">balance</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white text-[18px]">Balanceo Dinámico Digital</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Elimina vibraciones al volante a cualquier velocidad y alarga la vida útil del tren delantero.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-high/60 border border-surface-variant/40 rounded">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">swap_driving_apps_wheel</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white text-[18px]">Válvulas Nuevas y Control</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Reemplazo de válvulas, control de inflado exacto y rotación periódica recomendada.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs bg-secondary hover:bg-secondary-fixed text-on-secondary px-space-lg py-3.5 font-label text-label-lg uppercase tracking-wider chamfer-cut font-bold shadow-lg transition-all" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20cotizar%20cubiertas%20medida%3A" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Consultar Precio y Medidas por WhatsApp</span>
+</a>
+<span class="font-label text-label-md text-on-surface-variant uppercase tracking-wider">
+<strong class="text-white">Ituzaingó 3840</strong> · Rosario
+            </span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="bg-surface-container-highest/60 border border-primary/20 rounded-lg p-space-lg space-y-space-md relative shadow-xl">
+<div class="flex items-center justify-between border-b border-surface-variant/60 pb-space-sm">
+<span class="font-headline text-headline-sm uppercase text-white tracking-wider">¿Por qué cambiar tus cubiertas con Rubén?</span>
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+</div>
+<ul class="space-y-space-sm font-body text-body-md text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span>Asesoramiento sincero sobre el estado real de tu banda de rodamiento.</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span>Revisión complementaria sin cargo de pastillas de freno y amortiguadores al desmontar la rueda.</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span>Precios competitivos directos de distribuidor oficial.</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span>Garantía escrita de colocación y calibración.</span>
+</li>
+</ul>
+<div class="bg-[#0f121d] p-space-sm rounded border border-surface-variant/40 text-center">
+<span class="font-label text-label-sm uppercase tracking-widest text-primary font-bold block mb-1">Medidas más buscadas en stock</span>
+<div class="flex flex-wrap justify-center gap-1.5 text-xs text-on-surface font-mono">
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">175/70 R13</span>
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">175/65 R14</span>
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">185/60 R15</span>
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">195/65 R15</span>
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">205/55 R16</span>
+<span class="bg-surface-container px-2 py-0.5 rounded border border-surface-variant/40">265/65 R17</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SERVICIOS INTEGRALES                                          -->
+<!-- ============================================================ -->
+<section class="w-full bg-surface-container-low py-space-2xl relative text-on-surface" id="servicios">
+<div class="relative z-10 max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label text-label-lg uppercase tracking-widest text-secondary font-bold flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-secondary rounded-full"></span>
+  Diagnóstico, Reparación &amp; Neumáticos
+</span>
+<h2 class="font-headline text-headline-lg uppercase text-white font-bold">
+  SERVICIOS MECÁNICOS INTEGRALES
+</h2>
+<p class="font-body text-body-md text-on-surface-variant max-w-xl">
+  Herramientas computarizadas calibradas, fosa técnica equipada, desmontadoras de neumáticos y 15 años de oficio para resolver desde el cambio de cubiertas hasta fallas complejas de motor.
+</p>
+</div>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-primary-fixed font-label text-label-lg uppercase tracking-wider transition-colors font-bold" href="https://wa.me/5493410000000">
+<span>Ver disponibilidad de turno</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Services Grid: 6 Heavy Industrial Cards with Dark Charcoal Finish -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 1: NUEVO SERVICIO DESTACADO (VENTA Y COLOCACIÓN DE CUBIERTAS) -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border-2 border-secondary/60 hover:border-secondary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary text-[11px] font-label font-bold uppercase tracking-widest px-3 py-0.5 rounded-bl">
+  NUEVO SERVICIO
+</div>
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-secondary/20 text-secondary flex items-center justify-center transition-transform group-hover:scale-105 border border-secondary/30">
+<span class="material-symbols-outlined text-[28px]">tire_repair</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Venta y Colocación de Cubiertas</h3>
+</div>
+<span class="inline-block text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-secondary rounded font-semibold border border-secondary/20">Gomería Integral</span>
+<p class="font-body text-body-md text-on-surface-variant pt-1">
+  Venta directa de primeras marcas, colocación rápida, desarme cuidadoso, válvulas nuevas y balanceo dinámico de precisión para autos, utilitarios y SUVs.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-secondary hover:underline transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20consultar%20por%20cubiertas%20y%20colocacion">
+<span>Consultar cubiertas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-secondary/60 text-[20px]">swap_driving_apps_wheel</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border border-surface-variant/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between shadow-md">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-primary-container text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[28px]">handyman</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Mecánica General</h3>
+<span class="text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-primary rounded font-semibold">Motor &amp; Caja</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant">
+  Motores nafta y diésel, kit de distribución, bombas de agua, embragues reforzados y afinación profunda integral.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-primary hover:text-white transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20consultar%20por%20Mecanica%20General">
+<span>Consultar servicio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border border-surface-variant/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between shadow-md">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-primary-container text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[28px]">computer</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Diagnóstico Computarizado</h3>
+<span class="text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-secondary rounded font-semibold">Scanner ECU</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant">
+  Escaneo multimarca con software oficial. Lectura y reseteo de fallas, sensores de inyección electrónica y chequeo de actuadores en vivo.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-primary hover:text-white transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20hacer%20un%20diagnostico%20computarizado">
+<span>Consultar servicio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">sensors</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border border-surface-variant/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between shadow-md">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-primary-container text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[28px]">album</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Frenos y Suspensión</h3>
+<span class="text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-amber-400 rounded font-semibold">Seguridad</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant">
+  Discos ventilados, pastillas cerámicas, amortiguadores, bujes, extremos de dirección y tren delantero completo calibrado con las cubiertas.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-primary hover:text-white transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20revisar%20frenos%20y%20suspension">
+<span>Consultar servicio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">safety_check</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border border-surface-variant/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between shadow-md">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-primary-container text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[28px]">oil_barrel</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Aceite y Filtros</h3>
+<span class="text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-primary rounded font-semibold">Lubricación</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant">
+  Aceites sintéticos y semisintéticos certificados (YPF Elaion, Motul, Shell Helix, Castrol) con filtros originales de aire, aceite y combustible.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-primary hover:text-white transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20necesito%20presupuesto%20de%20cambio%20de%20aceite%20y%20filtros">
+<span>Consultar servicio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">water_drop</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-[#161922] p-space-lg rounded-lg border border-surface-variant/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between shadow-md">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded bg-primary-container text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold">Service Programado</h3>
+<span class="text-xs uppercase font-label px-2 py-0.5 bg-surface-container-high text-secondary rounded font-semibold">10k / 20k / 50k</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant">
+  Mantenimiento preventivo por kilometraje oficial. Control exhaustivo de 28 puntos de seguridad mecánica y asentado en libreta.
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between border-t border-surface-variant/30">
+<a class="inline-flex items-center gap-space-xs font-label text-label-md uppercase text-primary hover:text-white transition-colors font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20hacer%20el%20service%20por%20kilometraje">
+<span>Consultar servicio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">task_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- POR QUÉ ELEGIRNOS                                            -->
+<!-- ============================================================ -->
+<section class="w-full bg-[#0a152e] text-white py-space-2xl relative overflow-hidden border-y border-primary/20" id="trayectoria">
+<!-- Subtle Technical Tire Tread SVG Background Pattern (NO text watermark) -->
+<div class="absolute inset-0 opacity-[0.04] pointer-events-none select-none">
+<svg class="w-full h-full" fill="currentColor">
+<pattern height="80" id="treadRepeat" patterntransform="rotate(30)" patternunits="userSpaceOnUse" width="80">
+<rect height="15" rx="3" width="30" x="0" y="0"></rect>
+<rect height="15" rx="3" width="30" x="40" y="20"></rect>
+<rect height="15" rx="3" width="30" x="10" y="40"></rect>
+<rect height="15" rx="3" width="30" x="50" y="60"></rect>
+</pattern>
+<rect fill="url(#treadRepeat)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-2xl space-y-space-xs">
+<span class="font-label text-label-lg uppercase tracking-widest text-secondary font-bold">Trayectoria, Compromiso y Confianza</span>
+<h2 class="font-headline text-headline-lg uppercase text-white font-extrabold">
+  MÁS DE 15 AÑOS DE PRECISIÓN Y HONESTIDAD MECÁNICA
+</h2>
+<p class="font-body text-body-md text-primary-fixed/80">
+  En Taller Rubén Gómez explicamos detalladamente cada diagnóstico antes de desarmar o presupuestar. Trabajamos con repuestos legítimos, amplio stock de neumáticos y entregamos las piezas reemplazadas para tu tranquilidad.
+</p>
+</div>
+<!-- Metric Indicators Bento Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-container-lowest/70 border border-primary/20 backdrop-blur-md p-space-lg rounded-lg text-center shadow-lg">
+<div class="font-display text-display font-extrabold text-secondary leading-none">4.8 ★</div>
+<div class="font-headline text-headline-sm uppercase text-white mt-space-xs font-bold">Calificación Google</div>
+<div class="font-body text-body-sm text-primary-fixed/80 mt-1">Promedio de satisfacción real</div>
+</div>
+<div class="bg-surface-container-lowest/70 border border-primary/20 backdrop-blur-md p-space-lg rounded-lg text-center shadow-lg">
+<div class="font-display text-display font-extrabold text-amber-400 leading-none">+170</div>
+<div class="font-headline text-headline-sm uppercase text-white mt-space-xs font-bold">Opiniones Verificadas</div>
+<div class="font-body text-body-sm text-primary-fixed/80 mt-1">Conductores de Rosario</div>
+</div>
+<div class="bg-surface-container-lowest/70 border border-primary/20 backdrop-blur-md p-space-lg rounded-lg text-center shadow-lg">
+<div class="font-display text-display font-extrabold text-white leading-none">+15</div>
+<div class="font-headline text-headline-sm uppercase text-white mt-space-xs font-bold">Años de Oficio</div>
+<div class="font-body text-body-sm text-primary-fixed/80 mt-1">En el mismo taller Ituzaingó</div>
+</div>
+<div class="bg-surface-container-lowest/70 border border-primary/20 backdrop-blur-md p-space-lg rounded-lg text-center shadow-lg">
+<div class="font-display text-display font-extrabold text-secondary leading-none">+50</div>
+<div class="font-headline text-headline-sm uppercase text-white mt-space-xs font-bold">Medidas en Stock</div>
+<div class="font-body text-body-sm text-primary-fixed/80 mt-1">Cubiertas para autos y camionetas</div>
+</div>
+</div>
+<!-- Mechanic Commitment Checklist -->
+<div class="bg-surface-container-lowest/80 border border-primary/20 p-space-lg lg:p-space-xl rounded-xl max-w-4xl mx-auto shadow-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px] shrink-0 mt-0.5">verified_user</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Sin Sorpresas en el Presupuesto</h4>
+<p class="font-body text-body-sm text-primary-fixed/80">Si al desarmar surge una falla oculta, te contactamos y solicitamos tu aprobación antes de proceder.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px] shrink-0 mt-0.5">inventory_2</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Muestra de Repuestos Viejos</h4>
+<p class="font-body text-body-sm text-primary-fixed/80">Te devolvemos en caja cada pieza reemplazada para que compruebes el desgaste y el cambio real.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px] shrink-0 mt-0.5">timer</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Tiempos de Entrega Cumplidos</h4>
+<p class="font-body text-body-sm text-primary-fixed/80">Si tu auto entra con turno confirmado a la mañana, coordinamos fecha y hora cierta de retiro.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px] shrink-0 mt-0.5">person_check</span>
+<div>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Atendido por Rubén Gómez</h4>
+<p class="font-body text-body-sm text-primary-fixed/80">El dueño del taller supervisa y diagnostica cada auto personalmente. Compromiso cara a cara.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- GALERÍA / INSTALACIONES TÉCNICAS (FOTO REAL https://lh3.googleusercontent.com/aida/AEtjO1VADVxUfMMwyMmajLsSkg-nZU6DMHVX42H9knffpS9lH0XgFwgxrIG54jrfQelsFoPiQOaI5KV5EY94CEs69Wgc2nCS0v2UqaKigK4axl-UA_aIBxvVnbwM1kgTWYYIpeLjbUuOcHMRQimmhJ16x6OoDfixq3cM6wHnkWFIzB04L9yyk67wJxy6uNDiMPEVL5Odhbupqo6TtWRiwBW7WDXdinxuCpiP4Ddb--cLL-e_ihwkklNA5fLvGbU) -->
+<!-- ============================================================ -->
+<section class="w-full bg-surface-container-low py-space-2xl" id="trabajos">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label text-label-lg uppercase tracking-widest text-primary font-bold">Instalaciones e Instrumental</span>
+<h2 class="font-headline text-headline-lg uppercase text-white font-bold">
+  NUESTRO TALLER Y PUESTOS DE TRABAJO
+</h2>
+<p class="font-body text-body-md text-on-surface-variant max-w-xl">
+  Mirá las instalaciones en Ituzaingó 3840: fosa técnica, elevadores hidráulicos de 2 columnas, balanceadora computarizada y orden riguroso en cada estación.
+</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label text-label-md font-semibold">
+<span class="material-symbols-outlined text-secondary">photo_camera</span>
+<span>Fotos reales del taller en Rosario</span>
+</div>
+</div>
+<!-- Workshop Gallery Clean Bento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Main Real Workshop Photo Featured -->
+<div class="md:col-span-8 group relative min-h-[380px] lg:min-h-[440px] rounded-xl overflow-hidden shadow-2xl border border-surface-variant/50 bg-surface-container">
+<img alt="Taller mecánico Rubén Gómez Rosario interior con elevadores hidráulicos y scanner" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VADVxUfMMwyMmajLsSkg-nZU6DMHVX42H9knffpS9lH0XgFwgxrIG54jrfQelsFoPiQOaI5KV5EY94CEs69Wgc2nCS0v2UqaKigK4axl-UA_aIBxvVnbwM1kgTWYYIpeLjbUuOcHMRQimmhJ16x6OoDfixq3cM6wHnkWFIzB04L9yyk67wJxy6uNDiMPEVL5Odhbupqo6TtWRiwBW7WDXdinxuCpiP4Ddb--cLL-e_ihwkklNA5fLvGbU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent flex flex-col justify-end p-space-lg">
+<span class="font-label text-label-sm uppercase tracking-widest text-primary font-bold">Nave Principal · Ituzaingó 3840</span>
+<h4 class="font-headline text-headline-md uppercase text-white font-bold">Bahía de elevadores, gomería y diagnóstico computarizado</h4>
+<p class="font-body text-body-sm text-primary-fixed/90">Capacidad técnica simultánea para autos sedán, utilitarios, 4x4 y pickups.</p>
+</div>
+</div>
+<!-- Side Bento Cards -->
+<div class="md:col-span-4 flex flex-col gap-space-md">
+<!-- Card 1: Gomería & Balanceo -->
+<div class="flex-1 bg-surface-container p-space-lg rounded-xl border border-surface-variant/50 flex flex-col justify-between shadow-lg">
+<div class="space-y-space-xs">
+<div class="w-10 h-10 rounded bg-secondary/20 text-secondary flex items-center justify-center border border-secondary/30 mb-2">
+<span class="material-symbols-outlined text-[24px]">tire_repair</span>
+</div>
+<span class="font-label text-label-sm uppercase tracking-widest text-secondary font-bold">Puesto de Gomería</span>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Alineación y Balanceo Dinámico</h4>
+<p class="font-body text-body-sm text-on-surface-variant">
+        Equipamiento computarizado para montaje de cubiertas sin dañar llantas de aleación deportiva.
+      </p>
+</div>
+<div class="pt-2 text-xs font-label text-primary uppercase tracking-wider font-semibold">
+      Montaje y calibración inmediata
+    </div>
+</div>
+<!-- Card 2: Scanner & Inyección -->
+<div class="flex-1 bg-surface-container p-space-lg rounded-xl border border-surface-variant/50 flex flex-col justify-between shadow-lg">
+<div class="space-y-space-xs">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shadow mb-2">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<span class="font-label text-label-sm uppercase tracking-widest text-primary font-bold">Laboratorio Electrónico</span>
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Escaneo OBDII Multimarca</h4>
+<p class="font-body text-body-sm text-on-surface-variant">
+        Detección exacta de fallas 'Check Engine', sensores de ABS, inyección directa y tren rodante.
+      </p>
+</div>
+<div class="pt-2 text-xs font-label text-secondary uppercase tracking-wider font-semibold">
+      Diagnóstico garantizado
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- TESTIMONIOS (Google Reviews Verificadas)                     -->
+<!-- ============================================================ -->
+<section class="w-full bg-surface py-space-2xl" id="opiniones">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<svg class="w-5 h-5 shrink-0" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12 0 12s.7 2.3 1.9 4.7l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.1 7.5 23 12 23z" fill="#34A853"></path>
+</svg>
+<span class="font-label text-label-lg uppercase tracking-widest text-on-surface font-bold">Google Reviews Verificadas</span>
+</div>
+<h2 class="font-headline text-headline-lg uppercase text-white font-bold">
+  OPINIONES DE CLIENTES EN ROSARIO
+</h2>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container border border-surface-variant/40 px-space-md py-space-xs rounded-lg">
+<span class="font-headline text-headline-md text-amber-400 font-bold">4.8</span>
+<div class="flex flex-col">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label text-label-sm text-on-surface-variant uppercase tracking-wider">Más de 170 reseñas</span>
+</div>
+</div>
+</div>
+<!-- Reviews 3-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Review 1 -->
+<div class="bg-[#161922] p-space-lg rounded-xl border border-surface-variant/40 shadow-md flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white font-headline text-headline-sm flex items-center justify-center font-bold">
+  M
+</div>
+<div>
+<h4 class="font-headline text-headline-sm text-white leading-tight font-bold">Mariano R.</h4>
+<span class="font-label text-label-sm text-on-surface-variant">Reseña local · Ford Focus</span>
+</div>
+</div>
+<svg class="w-4 h-4 opacity-50" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4285F4"></path>
+</svg>
+</div>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant italic">
+  "Excelente atención de Rubén y su equipo. Llevé mi auto por el cambio de cubiertas y revisión de frenos. Me asesoró con las cubiertas justas para mi modelo, colocación en el día y precio inmejorable."
+</p>
+</div>
+<div class="font-label text-label-sm uppercase tracking-wider text-secondary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Cliente verificado</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-[#161922] p-space-lg rounded-xl border border-surface-variant/40 shadow-md flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline text-headline-sm flex items-center justify-center font-bold">
+  G
+</div>
+<div>
+<h4 class="font-headline text-headline-sm text-white leading-tight font-bold">Gonzalo Martínez</h4>
+<span class="font-label text-label-sm text-on-surface-variant">Cliente desde 2020 · Flota comercial</span>
+</div>
+</div>
+<svg class="w-4 h-4 opacity-50" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4285F4"></path>
+</svg>
+</div>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant italic">
+  "Hago los service de mi auto y la camioneta del laburo acá hace 4 años. Puntuales, prolijos y te muestran los repuestos cambiados. Ahora con venta de cubiertas solucionás todo en el mismo lugar."
+</p>
+</div>
+<div class="font-label text-label-sm uppercase tracking-wider text-secondary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Cliente verificado</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-[#161922] p-space-lg rounded-xl border border-surface-variant/40 shadow-md flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-white font-headline text-headline-sm flex items-center justify-center font-bold">
+  C
+</div>
+<div>
+<h4 class="font-headline text-headline-sm text-white leading-tight font-bold">Carla Benítez</h4>
+<span class="font-label text-label-sm text-on-surface-variant">Reseña local · Chevrolet Onix</span>
+</div>
+</div>
+<svg class="w-4 h-4 opacity-50" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4285F4"></path>
+</svg>
+</div>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-body-md text-on-surface-variant italic">
+  "Muy confiables y respetuosos. Te explican exactamente qué tiene el auto sin vueltas. El turno por WhatsApp fue súper ágil y me lo entregaron antes del horario acordado. Taller 100% recomendable."
+</p>
+</div>
+<div class="font-label text-label-sm uppercase tracking-wider text-secondary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Cliente verificado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- UBICACIÓN Y CONTACTO                                         -->
+<!-- ============================================================ -->
+<section class="w-full bg-surface-container-low py-space-2xl relative border-t border-surface-variant/30" id="ubicacion">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Precise Information & CTAs -->
+<div class="lg:col-span-6 space-y-space-lg">
+<div class="space-y-space-xs">
+<span class="font-label text-label-lg uppercase tracking-widest text-primary font-bold">Llegar al Taller</span>
+<h2 class="font-headline text-headline-lg uppercase text-white font-bold">
+  UBICACIÓN ESTRATÉGICA EN ROSARIO
+</h2>
+<p class="font-body text-body-md text-on-surface-variant">
+  Taller con amplio portón y rampa de fácil acceso vehicular y maniobra para ingreso de autos y camionetas.
+</p>
+</div>
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-sm p-space-md bg-[#161922] border border-surface-variant/40 rounded-lg">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">pin_drop</span>
+</div>
+<div class="space-y-0.5">
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Dirección</h4>
+<p class="font-body text-body-md text-on-surface-variant">
+<strong class="text-white">Ituzaingó 3840</strong>, Rosario, Santa Fe.<br/>
+<span class="text-primary text-sm">Entre Castellanos y Constitución.</span>
+</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md bg-[#161922] border border-surface-variant/40 rounded-lg">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">alarm</span>
+</div>
+<div class="space-y-0.5">
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Horario de Taller y Gomería</h4>
+<p class="font-body text-body-md text-on-surface-variant">
+  Lunes a Viernes: <strong class="text-white">08:30 a 16:00 hs</strong> (Corrido).<br/>
+<span class="text-on-surface-variant text-sm">Sábados y Domingos: Tareas técnicas y guardias acordadas.</span>
+</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md bg-[#161922] border border-surface-variant/40 rounded-lg">
+<div class="w-10 h-10 rounded bg-primary-container text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div class="space-y-0.5">
+<h4 class="font-headline text-headline-sm uppercase text-white font-bold">Canales Directos</h4>
+<p class="font-body text-body-md text-on-surface-variant">
+  Teléfono fijo: <a class="text-primary hover:underline font-semibold" href="tel:03414310000">(0341) 431-XXXX</a><br/>
+  WhatsApp turnos y cubiertas: <a class="text-secondary hover:underline font-semibold" href="https://wa.me/5493410000000">+54 9 341 000-0000</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Directions Action Buttons -->
+<div class="flex flex-wrap gap-space-md">
+<a class="inline-flex items-center gap-space-xs bg-primary-container hover:bg-blue-600 text-white font-label text-label-lg uppercase tracking-wider px-space-lg py-3 rounded transition-colors shadow-md font-bold" href="https://maps.google.com/?q=Ituzaingo+3840,+Rosario,+Santa+Fe" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">map</span>
+<span>Abrir en Google Maps</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-highest text-on-surface font-label text-label-lg uppercase tracking-wider px-space-lg py-3 rounded border border-surface-variant transition-colors shadow-sm font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20necesito%20la%20ubicacion%20del%20taller%20para%20llevar%20el%20auto" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-secondary">share_location</span>
+<span>Pedir indicación por WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Interactive Map Frame / Clean Card with Official Emblem -->
+<div class="lg:col-span-6 relative">
+<div class="w-full min-h-[380px] bg-[#161922] border border-surface-variant/60 rounded-xl shadow-2xl p-space-lg flex flex-col justify-between relative overflow-hidden technical-grid">
+<!-- Subtle decorative technical lines -->
+<div class="flex items-center justify-between border-b border-surface-variant/40 pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<img alt="Logo Taller Rubén Gómez" class="w-12 h-12 object-contain rounded-full border border-primary/30" src="https://lh3.googleusercontent.com/aida/AEtjO1VH1xFUQaXE3a_ugpw6amxD1eeo-sqtq4I7exBAs2xsQGNhKAZwLyGlndMV1vhqP9DZMToPYC5HTGm0X5PNjvoPd6SBH1bsLr_GS7g5B2YKdaOKJ9j-gfrtiKCtvZ2ekxJidIVSrrtOKJTkbE8tekqQ7-zfMevdffTHurdztPYPThkr6iairuGCCI4xUSCoCW9DdO6z1kSpOIV2aC__nLPUpAglvwleYa1kmQWmsOW7Wb8ESq1u6uqWGt8"/>
+<div>
+<h3 class="font-headline text-headline-sm uppercase text-white font-bold leading-none">Taller Rubén Gómez</h3>
+<p class="font-label text-label-sm text-secondary uppercase tracking-widest font-semibold mt-0.5">Mecánica General &amp; Venta de Cubiertas</p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-secondary/20 text-secondary text-xs rounded font-label uppercase font-bold tracking-wider border border-secondary/30">Abierto</span>
+</div>
+<div class="my-space-md p-space-md bg-surface-container-lowest/80 rounded-lg border border-surface-variant/40 space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<span class="text-white font-medium text-sm">Ituzaingó 3840 (Entre Castellanos y Constitución)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<span class="text-on-surface-variant text-sm">Atención: Lunes a Viernes de 08:30 a 16:00 hs</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-400 text-[20px]">star</span>
+<span class="text-white font-semibold text-sm">4.8 estrellas · Más de 170 opiniones reales en Google</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<p class="font-body text-body-sm text-on-surface-variant">
+      Instalaciones preparadas para recibir vehículos particulares, flotas y utilitarios para service, colocación de neumáticos y revisiones completas en Rosario.
+    </p>
+<div class="pt-2">
+<a class="w-full py-3 bg-secondary hover:bg-secondary-fixed text-on-secondary font-label text-label-md uppercase tracking-wider font-bold rounded flex items-center justify-center gap-2 transition-all shadow-lg" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20estoy%20en%20camino%20al%20taller" target="_blank">
+<span class="material-symbols-outlined text-[18px]">navigation</span>
+<span>Avisar llegada por WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- CTA FINAL BANNER                                             -->
+<!-- ============================================================ -->
+<section class="w-full bg-gradient-to-r from-[#0a1835] via-[#0d224d] to-[#0a1835] text-white py-space-2xl relative overflow-hidden border-t border-primary/30">
+<!-- Dynamic Tire Tread SVG Overlay (NO text watermark) -->
+<div class="absolute inset-0 opacity-[0.05] pointer-events-none select-none">
+<svg class="w-full h-full" fill="currentColor">
+<pattern height="60" id="tireCTAPattern" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="60">
+<rect height="8" rx="2" width="20" x="5" y="5"></rect>
+<rect height="8" rx="2" width="20" x="35" y="25"></rect>
+</pattern>
+<rect fill="url(#tireCTAPattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-margin lg:px-margin-desktop text-center space-y-space-md">
+<span class="font-label text-label-lg uppercase tracking-widest text-secondary font-bold">Atención Inmediata en Rosario</span>
+<h2 class="font-display text-display uppercase text-white leading-tight font-extrabold">
+  ¿TU AUTO NECESITA SERVICE O CAMBIO DE CUBIERTAS?
+</h2>
+<p class="font-body text-body-lg text-primary-fixed/90 max-w-2xl mx-auto">
+  Escribinos ahora por WhatsApp para coordinar tu turno técnico o consultar stock y presupuesto de cubiertas para esta misma semana.
+</p>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-space-sm bg-secondary hover:bg-secondary-fixed text-on-secondary px-space-2xl py-4 font-headline text-headline-md uppercase tracking-wider shadow-[0_0_25px_rgba(37,211,102,0.4)] transition-all duration-200 hover:scale-105 chamfer-cut-lg font-bold" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quiero%20coordinar%20un%20turno%20para%20esta%20semana" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+<span>CONSULTAR POR WHATSAPP AHORA</span>
+</a>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-md text-primary-fixed/80 font-label text-label-md uppercase pt-space-xs font-semibold">
+<span>Presupuesto sin cargo</span>
+<span>•</span>
+<span>Colocación de cubiertas en el acto</span>
+<span>•</span>
+<span>Garantía escrita en mano de obra</span>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- COMPACT INTEGRATED FOOTER ACCENT                             -->
+<!-- ============================================================ -->
+<div class="w-full bg-surface-container-lowest py-space-lg border-t border-surface-variant/40">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<img alt="Logo Taller Rubén Gómez" class="w-10 h-10 object-contain rounded-full border border-primary/30" src="https://lh3.googleusercontent.com/aida/AEtjO1VH1xFUQaXE3a_ugpw6amxD1eeo-sqtq4I7exBAs2xsQGNhKAZwLyGlndMV1vhqP9DZMToPYC5HTGm0X5PNjvoPd6SBH1bsLr_GS7g5B2YKdaOKJ9j-gfrtiKCtvZ2ekxJidIVSrrtOKJTkbE8tekqQ7-zfMevdffTHurdztPYPThkr6iairuGCCI4xUSCoCW9DdO6z1kSpOIV2aC__nLPUpAglvwleYa1kmQWmsOW7Wb8ESq1u6uqWGt8"/>
+<div>
+<div class="font-headline text-headline-sm uppercase text-white leading-tight font-bold">Taller Rubén Gómez</div>
+<div class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Ituzaingó 3840 · Rosario · Santa Fe</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+  Mecánica integral computarizada &amp; Gomería · Todos los derechos reservados
+</div>
+</div>
+</div>
+<footer class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-variant/30">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-space-xl">
+<div class="space-y-space-sm md:col-span-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline text-headline-sm uppercase tracking-wide text-white font-bold">Taller Rubén Gómez</span>
+</div>
+<p class="font-body text-body-sm text-on-surface-variant max-w-md">
+        Especialistas en mecánica integral de precisión, diagnóstico computarizado, frenos, tren delantero y nuevo centro de venta y colocación de cubiertas multimarca en Rosario. Más de 15 años de honestidad técnica comprobable.
+      </p>
+</div>
+<div class="space-y-space-xs">
+<h4 class="font-label text-label-lg uppercase tracking-wider text-white mb-space-sm font-bold">Atención</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Lunes a Viernes: 08:30 a 16:00 hs</p>
+<p class="font-body text-body-sm text-on-surface-variant">Sábados: Guardias técnicas acordadas</p>
+<p class="font-body text-body-sm text-on-surface-variant">Ituzaingó 3840 · Rosario, Santa Fe</p>
+</div>
+<div class="space-y-space-xs">
+<h4 class="font-label text-label-lg uppercase tracking-wider text-white mb-space-sm font-bold">Urgencias y Turnos</h4>
+<p class="font-body text-body-sm text-on-surface-variant">Teléfono: (0341) 431-XXXX</p>
+<p class="font-body text-body-sm text-on-surface-variant">WhatsApp: +54 9 341 000-0000</p>
+<p class="font-body text-body-sm text-on-surface-variant">Presupuesto sin cargo en taller</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop mt-space-xl pt-space-md text-center md:text-left flex flex-col md:flex-row justify-between items-center text-on-surface-variant font-body text-body-sm border-t border-surface-variant/20">
+<p>© 2024 Taller Mecánico Rubén Gómez. Rosario, Argentina.</p>
+<p class="mt-space-xs md:mt-0 font-label text-label-sm uppercase tracking-widest font-semibold">Mecánica &amp; Venta de Cubiertas</p>
+</div>
+</footer>
+</div></main>
+<!-- Floating WhatsApp CTA Action Widget -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-sm">
+<div class="hidden md:flex items-center bg-surface-container-high border border-surface-variant/80 px-space-md py-space-sm rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+<span class="font-body text-body-sm text-white font-medium">¿Buscás cubiertas o turno? Hablá con Rubén</span>
+</div>
+<a aria-label="Contactar por WhatsApp" class="relative group flex items-center justify-center w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:scale-105 transition-transform" href="https://wa.me/5493410000000?text=Hola%20Ruben%2C%20quisiera%20consultar%20por%20un%20servicio%20o%20cubiertas" target="_blank">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+<span class="absolute top-0 right-0 flex h-3.5 w-3.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400"></span>
+</span>
+</a>
+</div>
+</body></html>
